@@ -1,0 +1,9 @@
+<!-- 
+	     TO add the jsp expresion language in the jsp page follow following stape
+	     1] add jstl dependency  or jar file --------->
+pom.xml 2] add
+<%@isELIgnored="true" %>
+-----------> web.xml 3] add directory
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+-->
