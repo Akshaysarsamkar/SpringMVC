@@ -1,15 +1,18 @@
 package Springmvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import model.Student;
+import service.UserServices;
 
 @Controller
 public class DemoController {
+	
+	@Autowired
+	private UserServices services;
 
 	@ModelAttribute
 	public void common(Model model) {
@@ -24,7 +27,9 @@ public class DemoController {
 	}
 
 	@RequestMapping("/senddata")
-	public String senddata(@ModelAttribute Student student) {
+	public String senddata(@ModelAttribute("student") Student student) {
+		int student2 = services.createStudent(student);
+		System.out.println("Data added succefully " + student2);
 		return "senddata";
 	}
 
