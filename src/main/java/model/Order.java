@@ -20,11 +20,11 @@ public class Order {
 	private String op;
 	private Date date;
 
-	public int getOid() {
+	public int getid() {
 		return id;
 	}
 
-	public void setOid(int id) {
+	public void setid(int id) {
 		this.id = id;
 	}
 
