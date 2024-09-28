@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,6 +20,9 @@
 		<div class="card p-3 container" style="background-color: #ffffff;">
 			<form action="data1" method="post">
 				<h1 class="text-center">Registration Form</h1>
+				<p>
+					<form:errors path="student1.*" />
+				</p>
 				<div class="mb-3">
 					<label for="exampleInputEmail1" class="form-label">Student
 						Name </label> <input type="text" class="form-control"
@@ -63,13 +67,15 @@
 				<h1 class="mb-3">Address</h1>
 				<div class="mb-3">
 					<input type="text" class="form-control" id="exampleInputEmail1"
-						aria-describedby="emailHelp" name="address.city" placeholder="Enter the city name">
+						aria-describedby="emailHelp" name="address.city"
+						placeholder="Enter the city name">
 					<div id="emailHelp" class="form-text"></div>
 				</div>
 
 				<div class="mb-3">
 					<input type="text" class="form-control" id="exampleInputEmail1"
-						aria-describedby="emailHelp" name="address.street" placeholder="Enter the Street Name">
+						aria-describedby="emailHelp" name="address.street"
+						placeholder="Enter the Street Name">
 					<div id="emailHelp" class="form-text"></div>
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
