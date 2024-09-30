@@ -52,8 +52,9 @@
 
 		<property name="annotatedClasses">
 			<list>
-				<value> model.Order</value>
+				<value> model.Product</value>
 			</list>
+			
 		</property>
 
 	</bean>

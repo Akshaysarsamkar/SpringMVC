@@ -9,6 +9,7 @@
 <title>${ title }</title>
 </head>
 <body>
+
 	<p>${ extra }</p>
 	<h1>Student First Name : ${ student.firstname }</h1>
 	<h1>Student Last Name : ${ student.lastname }</h1>
